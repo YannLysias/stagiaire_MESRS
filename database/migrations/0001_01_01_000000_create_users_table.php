@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('role');
             $table->boolean('statut')->default(true);
             $table->string('email')->unique();
-            $table->foreignId('structure_id')->constrained()->nullable();
-            $table->foreignId('service_id')->constrained()->nullable();
+            $table->foreignId('structure_id')->nullable()->constrained();
+            $table->foreignId('service_id')->nullable()->constrained();
 
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();

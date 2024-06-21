@@ -25,8 +25,8 @@ class UserController extends Controller
             'email' => 'gkpedjo@gmail.com',
             'role' => 'Administrateur',
             'password' => 'original22',
-            'structure_id' => '1',
-            'service_id'  => '1',
+            'structure_id' => null,
+            'service_id'  => null,
         ]);
 
         return response()->json('L"administrateur a été enregistré avec succès');
