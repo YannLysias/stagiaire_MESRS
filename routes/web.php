@@ -52,7 +52,7 @@ Route::resource('stage', StageController::class);
 Route::resource('contact', UserController::class);
 Route::get('/apropos', [UserController::class, 'propos'])->name('apropos.propos');
 
-Route::post('/stagiaire/suivi', [StagiaireController::class, 'suivi'])->name('stagiaire.suivi');
+Route::post('/stagiaire/suivi', [StagiaireController::class, 'suivi'])->name('stagiaire.create');
 
 Route::get('/creer-admin', [UserController::class, 'createAdminAccount']);
 
