@@ -57,28 +57,17 @@
 
 <body>
 
-	@if (session('success'))
-		<div class="custom-alert" id="custom-alert">
-			{{ session('success') }}
-			<button onclick="closeAlert()">×</button>
-		</div>
-		<script>
-			function closeAlert() {
-				document.getElementById('custom-alert').style.display = 'none';
-			}
-		</script>
-	@endif
-	@if (session('success'))
-		<div class="custom-alert" id="custom-alert">
-			{{ session('error') }}
-			<button onclick="closeAlert()">×</button>
-		</div>
-		<script>
-			function closeAlert() {
-				document.getElementById('custom-alert').style.display = 'none';
-			}
-		</script>
-	@endif
+@if (session('success'))
+        <div class="custom-alert" id="custom-alert">
+            <p>{{ session('success') }}</p>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+        <script>
+            function closeAlert() {
+                document.getElementById('custom-alert').style.display = 'none';
+            }
+        </script>
+    @endif
 	<style>
 		.custom-alert {
 			position: fixed;

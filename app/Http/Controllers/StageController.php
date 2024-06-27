@@ -173,10 +173,10 @@ class StageController extends Controller
         }
 
         $path_recommandation = Storage::putFile('public/recommandations', $request->recommandation);
-        $path_cv_convert_to_table = explode('/', $path_recommandation);
+        $path_recommandation_convert_to_table = explode('/', $path_recommandation);
         if($request->has('recommandation'))
         {
-            $path_recommandation = Storage::putFile('public/recommandations', $request->cv);
+            $path_recommandation = Storage::putFile('public/recommandations', $request->recommandation);
             $path_recommandation_convert_to_table = explode('/', $path_recommandation);
         }
       
